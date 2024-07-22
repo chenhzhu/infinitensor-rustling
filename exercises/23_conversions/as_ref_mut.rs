@@ -20,6 +20,7 @@ fn num_sq<T>(arg: &mut T)
 where T: AsMut<u32>
 {
     // TODO: Implement the function body.
+    *arg.as_mut() =  *arg.as_mut() * *arg.as_mut()
 }
 
 fn main() {

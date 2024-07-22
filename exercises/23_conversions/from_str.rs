@@ -18,7 +18,7 @@ struct Person {
 #[derive(Debug, PartialEq)]
 enum ParsePersonError {
     // Empty input string
-    Empty,
+    // Empty,
     // Incorrect number of fields
     BadLen,
     // Empty name field
@@ -44,9 +44,9 @@ impl FromStr for Person {
     type Err = ParsePersonError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        if s.is_empty() {
-            Err(ParsePersonError::Empty)?
-        }
+        // if s.is_empty() {
+        //     Err(ParsePersonError::Empty)?
+        // }
 
         let s_split: Vec<&str> = s.split(',').collect();
         if s_split.len() != 2 {
